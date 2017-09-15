@@ -1,0 +1,39 @@
+#news-content {
+    width: 1140px;
+    margin: 0 auto;
+    margin-top: 30px;
+    position: relative;
+}
+
+#news-content .item {
+    position: absolute;
+    border: 1px solid #ccc;
+    transition: all 1s;
+    width: 280px;
+    margin: 20px 48px;
+    text-align: center;
+    padding: 0 0 10px 0;
+    opacity: 0;
+}
+
+#news-content .item img {
+    width: 260px;
+    margin: 10px
+}
+
+#news-content .item .header {
+    height: 25px;
+    margin: 0 12px;
+    border-bottom: 1px solid #DBDBDB
+}
+
+#news-content .item .desp {
+    font-size: 12px;
+    line-height: 1.8;
+    margin: 10px 15px 0;
+    color: #777371;
+}
+
+#news-content .hide {
+    display: none;
+}

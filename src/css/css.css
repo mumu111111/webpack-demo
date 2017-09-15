@@ -1,0 +1,920 @@
+/* @font-face {
+    font-family: 'icon'; 
+    src: url('//at.alicdn.com/t/font_m7i895cp82qk6gvi.eot');
+    src: url('//at.alicdn.com/t/font_m7i895cp82qk6gvi.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_m7i895cp82qk6gvi.woff') format('woff'),
+    url('//at.alicdn.com/t/font_m7i895cp82qk6gvi.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_m7i895cp82qk6gvi.svg#iconfont') format('svg');
+}
+
+@font-face {
+    font-family: 'hover-bgc';  
+    src: url('//at.alicdn.com/t/font_ntmqej1w26opf1or.eot');
+    src: url('//at.alicdn.com/t/font_ntmqej1w26opf1or.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_ntmqej1w26opf1or.woff') format('woff'),
+    url('//at.alicdn.com/t/font_ntmqej1w26opf1or.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_ntmqej1w26opf1or.svg#iconfont') format('svg');
+} 
+*/
+
+
+
+
+@font-face {font-family: "icon";
+    src: url('../font/iconfont.eot?t=1505446658034'); /* IE9*/
+    src: url('../font/iconfont.eot?t=1505446658034#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('data:application/x-font-woff;charset=utf-8;base64,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') format('woff'),
+    url('../font/iconfont.ttf?t=1505446658034') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+    url('../font/iconfont.svg?t=1505446658034#iconfont') format('svg'); /* iOS 4.1- */
+  }
+  
+  .icon {
+    font-family:"icon" !important;
+    font-size:60px;
+    font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .icon-iconfonthk:before { content: "\e611"; }
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+html{color:#000;background:#FFF}
+
+body,div,dl,dt,dd,ul,ol,li,
+h1,h2,h3,h4,h5,h6,
+pre,code,form,fieldset,legend,
+input,textarea,p,blockquote,
+th,td{margin:0;padding:0
+}
+
+table{
+    border-collapse:collapse;
+    border-spacing:0
+}
+
+fieldset,img{
+    border:0
+}
+
+address,caption,cite,code,
+dfn,em,strong,th,var{
+    font-style:normal;
+    font-weight:normal;
+}
+ol,ul{
+    list-style:none;
+}
+
+caption,th{
+    text-align:left
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-size:100%;
+    font-weight:normal;
+}
+q:before,q:after{
+    content:'';
+}
+abbr,acronym{
+    border:0;
+    font-variant:normal;
+}
+
+sup{
+    vertical-align:text-top;
+}
+
+sub{
+    vertical-align:text-bottom
+}
+input,textarea,select{
+    font-family:inherit;
+    font-size:inherit;
+    font-weight:inherit;
+    *font-size:100%;
+}
+legend{
+    color:#000;
+}
+
+*{
+    font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+
+}
+.nav{
+    width: 100%;
+    height: 70px;
+    background-color: rgba(0,0,0,0.2);
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 1030;
+
+}
+
+.container{
+    width:1170px;
+    height: 100%;
+    margin: 0 auto;
+
+}
+.nav_left{
+    width: 90px;
+    height: 100%;
+    float: left;
+}
+.nav_left a{
+    text-decoration: none;
+}
+/* .icon {
+    font-family:"icon" !important;
+    font-size:60px;
+    font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #000;
+    fill: currentColor;
+} */
+
+.nav_left>h1{
+    width: 100%;
+    height: 100%;
+
+}
+.nav_left>h1>a{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+
+}
+
+
+.nav_right{
+    height: 100%;
+    float: right;
+}
+.nav_right ul:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.nav_right>ul>li{
+
+
+    float: left;
+
+    margin:0 1px;
+
+    border-radius: 4px;
+
+}
+.nav_right>ul>li>a{
+    display: block;
+    height: 70px;
+    width: 80px;
+    text-decoration: none;
+    color: #fff;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    line-height: 70px;
+    text-align: center;
+}
+
+.nav_right ul>.active {
+    background: #fed136;
+}
+
+
+.nav_right>ul>li>a:hover{
+    color: orange;
+
+
+}
+/*导航栏结束*/
+
+
+
+
+.header{
+
+    z-index: 1;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    /*width: 100%;*/
+    /*height: 757px;*/
+    /*   background-size: cover ;背景图片充满整个容器*/
+}
+.bg-text{
+    color: #fff;/* color
+    可以被继承*/
+    text-align: center;
+    padding: 230px 0;
+}
+.header .bg-text p:nth-child(1){
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 56px;
+    font-weight: 700;
+    margin-bottom: 20px;
+
+}
+
+.header .bg-text p:nth-child(2){
+    font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 45px;
+    font-weight: 200;
+    font-style: italic;
+    letter-spacing: 1px;
+    margin-bottom: 60px;
+}
+
+.header .bg-text a{
+    text-decoration: none;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: #ff1;
+    padding: 26px;
+    background: #ccc;
+    border-radius: 5px;
+}
+
+
+.section{
+    height: 100%;
+    background: #fff;
+    padding: 50px 0;
+    text-align: center;/*先这样写*/
+}
+.section_center{
+    width: 380px;
+}
+
+
+.section .service-content{
+    box-sizing: border-box;
+    display: inline-block;
+    text-align:center;
+    width: 270px;
+    margin: 50px;
+
+}
+.section .service-content img{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+.section h2,h4{
+    color: #000;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.section p:nth-child(1){
+    margin-bottom: 90px;
+}
+.section h2{
+    font-weight: 900;
+    font-size: 40px;
+}
+.section h4{
+    font-weight: 600;
+    font-size: 18px;
+    padding: 16px;
+}
+
+
+.section p{
+    color: #ccc;
+    font-style: italic;
+    font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+
+}
+
+/* section 结束*/
+.section2{
+    background: #f7f7f7;
+
+}
+.section2 .foods{
+    width: 360px;
+    height: 370px;
+    float: left;
+    margin: 60px 10px ;
+    border-radius: 5px;
+    position: relative;
+
+}
+.section2:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+
+.section2 .foods img{
+    width: 360px;
+    height: 340px;
+
+}
+.section2 .foods p {
+    margin-top: -2px;
+    padding: 20px;
+    background-color: #ffff11;
+}
+
+
+/*
+
+opacity 搭配  position ： absolute   实现遮盖效果
+opacity：的值大于和小于1时
+position ： absolute
+
+
+*/
+
+.hover-bgc {
+    font-family:"hover-bgc" !important;
+    font-size:60px;
+    font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #fff;
+    fill: currentColor;
+}
+
+.hover-bgc {
+    position: absolute;
+    top: 160px;
+    left: 150px;
+
+
+}
+
+
+
+
+
+.hover-wrap{
+}
+.hover{
+    width: 100%;
+    height: 340px;
+    background: #fed136;
+    position: absolute;
+    opacity: 0;
+
+}
+a{
+    text-decoration: none;
+
+}
+
+.foods .hover-wrap:hover .hover{
+    opacity: 0.8;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* section 结束*/
+
+.section3{
+    width: 100%;
+    background: #f2f2;
+}
+ul,
+li{
+    list-style: none;
+
+}
+
+.section3 ul{
+    margin-top: 60px;
+    position: relative;
+}
+
+.section3  li:after{
+    content: '';
+    display: block;
+
+    height: 100%;
+    position: absolute;
+    border: 1px solid #ddd;
+    top: 0;
+    left: 50%;
+
+    margin-left: -1px; /* border*/
+    z-index: -1;
+
+}
+/*
+线在  可以包含边框内的padding+content 区域
+高度100%  是包含 padding的
+*/
+.section3 li{
+    padding: 0 0 125px 0;
+    position: relative;
+    z-index: 2;
+}
+.section3 li:last-child{
+    padding-bottom: 0;
+}
+
+.section3 img{
+    width: 170px;
+    border-radius: 50%;
+    border: 7px solid #ddd;
+
+
+}
+.section3 .about_text{
+    width: 30em;
+    position: absolute;
+    top:0;
+    right: 50%;
+    margin-right: 105px;
+    text-align: right;
+
+
+}
+
+.section3 li:nth-child(even)>.about-text{
+
+    left: 50%;
+    margin-left: 105px;
+    text-align: left;
+
+}
+.section li:last-child{
+}
+
+.section3 .tu{
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    background: orange;
+    border: 7px solid #ddd;
+    text-align: center;
+    float: center;
+    margin-left: 498px;
+}
+
+.tu h4{
+    margin-top: 30px;
+    line-height: 26px;
+    font-size: 18px;
+    color: #fff;
+
+
+}
+
+
+
+
+
+/* section 4*/
+
+.section4{
+    background: #f7f7f7;
+}
+
+.team1{
+    width: 390px;
+    float: left;
+
+
+}
+.team:after{
+    content: '';
+    display: block;
+    clear: both;
+
+}
+.team{
+    margin: 40px 0;
+
+}
+
+.team1 img{
+    width: 225px;
+    border-radius: 50%;
+    border: 7px solid #fff;
+    padding: 0 7px;
+
+}
+
+
+
+.team1 a
+{
+    display: block;
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    font-size: 30px;
+    
+    color: #fff;
+    background: #000;
+    line-height: 40px;
+
+
+
+}
+
+.team1 a .icon,
+.footer-center a .icon{
+    font-size: inherit;
+    /* color: #fff; */
+
+}
+.team1 a:hover,
+.footer-center a:hover{
+    background: orange;
+}
+
+.team1 ul li,
+.footer-center ul li{
+    display: inline-block;
+    text-align: center;
+
+
+}
+
+.team1 p{
+    margin-bottom: 20px;
+}
+
+
+
+.team_text{
+    text-align: center;
+    width: 750px;
+    margin: 0 auto;
+    line-height: 1.75;
+
+}
+
+/* my team 结束*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.aside{
+    background: #fff;
+}
+
+.container .row1{
+    width: 20%;
+}
+
+.row1 {
+    display: inline-block;
+    padding: 15px;
+    margin: 50px 0;
+}
+
+
+/* aside 结束*/
+
+
+
+
+
+
+
+.section5{
+    background: #000;
+    background-image: url(http://book.jirengu.com/jirengu-inc/jrg-tehui/homework/%E8%8B%A5%E6%84%9A/16/img/map-image.png);
+
+}
+
+.section5 h2{
+    color: #fff;
+}
+
+.contact-text{
+    margin: 50px 0;
+    box-sizing:border-box;
+
+
+}
+input,textarea{
+    padding: 20px;
+}
+.contact-text input,textarea{
+    display: block;
+
+    margin-bottom: 20px;
+    border-radius: 3px;
+}
+.text-left{
+    float: left;
+
+    width: 50%;
+
+
+
+}
+.text-left input{
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+.text-left  input:foucs{
+    border-color: #fed136;
+}
+
+.text-right{
+
+    box-sizing: border-box;
+
+    float: right;
+    width: 47%;
+    padding:  0;
+
+
+}
+
+.contact-text:after{
+    content: '';
+    display: block;
+    clear: both;
+
+}
+.contact-text textarea{
+    box-sizing: border-box;
+    width: 100%;
+    height: 220px;
+
+
+
+}
+
+.section5 .section5-btn{
+    color: #fff;
+    background: #fed136;
+    border-color: #fed136;
+    font-weight: 700;
+    padding: 20px 40px;
+    border-radius: 3px;
+    font-size: 18px;
+
+
+
+}
+
+.section5 button:hover{
+    background: orange;
+}
+
+
+
+
+
+/* section5 end*/
+
+
+
+
+
+
+
+.footer{
+
+    background: #fff;
+}
+.footer-center a{
+    color: red;
+    background: #000;
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+}
+
+
+.footer-text{
+    width: 100%;
+    padding: 30px 0;
+
+}
+
+.footer-left{
+    float:left;
+    width: 32%;
+    padding: 10px 10px;
+
+
+}
+
+.footer-center{
+    width: 32%;
+    float: left;
+    text-align: center;
+    padding: 10px 10px;
+
+
+}
+
+.footer-right{
+    width: 22%;
+    float: right;
+    padding: 10px 5px;
+
+}
+
+/*回到顶部按钮*/
+/* .go-top {
+    position: fixed;
+    right: 30px;
+    bottom: 50px;
+    width: 90px;
+    height: 50px;
+    border-radius: 6px;
+    border: none;
+    background: #fed136;
+    color: #fff;
+    font-size: 18px;
+    display: none;
+} */
+
+
+/* news 加载新闻*/
+#news {
+    width: 100%;
+    text-align: center;
+    background: #eee;
+    padding: 80px 0;
+}
+
+.news-header>h1 {
+    font-weight: 900;
+    font-size: 40px;
+
+    margin-bottom: 20px;
+}
+
+.news-header>p {
+    color: #777;
+}
+
+.news-header {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+/*瀑布流*/
+/* #news-content {
+    width: 1140px;
+    margin: 0 auto;
+    margin-top: 30px;
+    position: relative;
+}
+
+#news-content .item {
+    position: absolute;
+    border: 1px solid #ccc;
+    transition: all 1s;
+    width: 280px;
+    margin: 20px 48px;
+    text-align: center;
+    padding: 0 0 10px 0;
+    opacity: 0;
+}
+
+#news-content .item img {
+    width: 260px;
+    margin: 10px
+}
+
+#news-content .item .header {
+    height: 25px;
+    margin: 0 12px;
+    border-bottom: 1px solid #DBDBDB
+}
+
+#news-content .item .desp {
+    font-size: 12px;
+    line-height: 1.8;
+    margin: 10px 15px 0;
+    color: #777371;
+} 
+
+#news-content .hide {
+    display: none;
+}
+
+*/
+
+#load {
+    visibility: hidden;
+    height: 20px;
+}
+
+
+
+.lazy-more {
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 30px;
+    background: #fed136;
+    border-radius: 6px;
+    border: none;
+    width: 150px;
+    height: 50px;
+}
+
+
+/*加载更多*/
+/* .load {
+    width: 100%;
+}
+
+.load>.load-more {
+    margin: 0 auto;
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    background: #fed136;
+    border-radius: 6px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 18px;
+} */
+
+.load>.not-load {
+    margin: 0 auto;
+    text-align: center;
+    background: #ccc;
+}
+
+
+
+
+
+
+
+
+
+
